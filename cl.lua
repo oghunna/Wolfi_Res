@@ -12,7 +12,7 @@ CreateThread(function()
 		Citizen.Wait(5000)
         local rozdzialka = GetIsWidescreen()
         if not rozdzialka and not jestGit then
-            ESX.TriggerServerCallback('HighLandRP:Permisja', function(bajpas)
+            ESX.TriggerServerCallback('hubercik_resolution:Permisja', function(bajpas)
                 print(bajpas)
                 if not bajpas then
                     licznik()
@@ -34,7 +34,7 @@ function licznik()
 			if czasownik > 0 then
                 czasownik = czasownik - 1
                 if czasownik == 0 then
-                    TriggerServerEvent("HighLandRP:KickPlayer")
+                    TriggerServerEvent("hubercik_resolution:KickPlayer")
                 end
 			end
 		end
